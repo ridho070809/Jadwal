@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aktifitas Piket Harian | Monitoring Kelas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Dasar */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Container utama yang menyerupai buku/form */
+        .page-container {
+            width: 800px;
+            max-width: 100%;
+            background-color: #ffffff; /* Warna kertas */
+            border: 1px solid #ccc;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            position: relative;
+            /* Garis samping seperti di buku tulis */
+            background-image: linear-gradient(to right, #e0e0e0 1px, transparent 1px);
+            background-size: 15px 100%;
+        }
+
+        /* Header Informasi Hari/Tanggal */
+        .header-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .header-info div {
+            flex-grow: 1;
+        }
+
+        .header-info span {
+            font-weight: bold;
+            display: block;
+            margin-top: 5px;
+            border-bottom: 1px solid #34495e;
+            padding-bottom: 2px;
+        }
+
+        h1 {
+            font-family: 'Permanent Marker', cursive; /* Font coretan tangan */
+            color: #e74c3c;
+            text-align: center;
+            margin: 0 20px;
+            font-size: 2em;
+        }
+        
+        /* Area Garis-Garis Horizontal (Seperti Buku Tulis) */
+        .ruled-area {
+            border: 1px solid #ddd;
+            margin-top: 20px;
+            padding: 10px;
+            background-image: repeating-linear-gradient(to bottom, #eeeeee, #eeeeee 20px, #ffffff 20px, #ffffff 40px);
+            line-height: 40px; /* Tinggi baris */
+            min-height: 400px;
+        }
+        
+        /* Area Monitoring Inti */
+        .monitoring-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 kolom untuk data piket */
+            gap: 20px;
+            padding: 10px;
+        }
+
+        .piket-item {
+            border: 2px solid #3498db;
+            padding: 10px;
+            text-align: center;
+            background-color: #ecf0f1;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        /* Styling Kotak Foto */
+        .foto-box {
+            height: 100px;
+            background-color: #bdc3c7;
+            border: 1px dashed #7f8c8d;
+            margin-bottom: 10px;
+            line-height: 100px;
+            color: #7f8c8d;
+            font-style: italic;
+            text-align: center;
+            font-family: 'Permanent Marker', cursive;
+        }
+
+        .piket-item input[type="text"] {
+            width: calc(100% - 10px);
+            padding: 5px;
+            margin-bottom: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-weight: bold;
+            padding: 10px;
+            background-color: #f39c12;
+            color: white;
+            margin: 0 0 15px 0;
+            border-radius: 5px;
+        }
+        
+        .not-piket-box {
+            grid-column: 1 / span 3; /* Kotak "Yang Tidak Piket" membentang 3 kolom */
+            border: 2px solid #e74c3c;
+            background-color: #fceae9;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        .not-piket-box .item-list {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-container">
+        <div class="header-info">
+            <div>
+                No: <span>_______________</span>
+            </div>
+            <h1>Absensi Piket Hari: Aktifitas Harian</h1>
+            <div>
+                Hari/Tanggal: <span>_______________</span>
+            </div>
+        </div>
+
+        <div class="monitoring-grid">
+
+            <div class="piket-item">
+                <div class="foto-box">FOTO</div>
+                Nama: <input type="text" value="Nama Piket 1">
+                Keterangan: <input type="text" placeholder="Status/Nilai">
+            </div>
+
+            <div class="piket-item">
+                <div class="foto-box">FOTO</div>
+                Nama: <input type="text" value="Nama Piket 2">
+                Keterangan: <input type="text" placeholder="Status/Nilai">
+            </div>
+
+            <div class="piket-item">
+                <div class="foto-box">FOTO</div>
+                Nama: <input type="text" value="Nama Piket 3">
+                Keterangan: <input type="text" placeholder="Status/Nilai">
+            </div>
+            
+            <div class="piket-item">
+                <div class="foto-box">FOTO</div>
+                Nama: <input type="text" value="Nama Piket 4">
+                Keterangan: <input type="text" placeholder="Status/Nilai">
+            </div>
+            
+            <div class="piket-item">
+                <div class="foto-box">FOTO</div>
+                Nama: <input type="text" value="Nama Piket 5">
+                Keterangan: <input type="text" placeholder="Status/Nilai">
+            </div>
+
+            <div class="piket-item">
+                <div class="foto-box">FOTO</div>
+                Nama: <input type="text" value="Nama Piket 6">
+                Keterangan: <input type="text" placeholder="Status/Nilai">
+            </div>
+
+
+            <div class="not-piket-box">
+                <div class="section-title">YANG TIDAK PIKET (Absen/Sakit/Izin)</div>
+                <div class="item-list">
+                    
+                    <div class="piket-item" style="border-color: #f1c40f; background-color: #fef9e7;">
+                        <div class="foto-box">FOTO</div>
+                        Nama: <input type="text" placeholder="Siswa A">
+                        Ket: <input type="text" placeholder="Sakit/Izin">
+                    </div>
+                    
+                    <div class="piket-item" style="border-color: #f1c40f; background-color: #fef9e7;">
+                        <div class="foto-box">FOTO</div>
+                        Nama: <input type="text" placeholder="Siswa B">
+                        Ket: <input type="text" placeholder="Sakit/Izin">
+                    </div>
+
+                    <div class="piket-item" style="border-color: #f1c40f; background-color: #fef9e7;">
+                        <div class="foto-box">FOTO</div>
+                        Nama: <input type="text" placeholder="Siswa C">
+                        Ket: <input type="text" placeholder="Sakit/Izin">
+                    </div>
+
+                </div>
+            </div>
+
+        </div> <div style="margin-top: 30px; display: flex; justify-content: flex-end; font-size: 0.9em;">
+            <p><strong>Verifikator:</strong> <span>___________________</span></p>
+        </div>
+
+    </div>
+
+</body>
+</html>
